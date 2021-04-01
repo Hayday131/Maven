@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirstTest {
 	
-	@Test
+	@Test(priority=2)
 	public void login() throws InterruptedException  {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -39,7 +39,7 @@ public class FirstTest {
 		driver.quit();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void register() {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
